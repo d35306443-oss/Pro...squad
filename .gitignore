@@ -1,0 +1,84 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+
+# ==============================
+# Django / Python
+# ==============================
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+venv311/
+.venv/
+
+# Django local database
+*.sqlite3
+
+# Django uploaded media
+media/
+
+# Environment / secrets
+.env
+
+# Logs
+*.log
+
+# ==============================
+# Android / Gradle generated
+# ==============================
+.gradle/
+android/.gradle/
+android/build/
+android/app/build/
+
+# Accidental temporary Flutter project
+crop_backend/temp_app/
+
+# Large AI model - not used by backend
+crop_backend/ai_model/crop_model.keras
