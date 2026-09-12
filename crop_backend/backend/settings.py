@@ -19,9 +19,9 @@ SECRET_KEY = os.getenv(
 DEBUG = "True"
 
 ALLOWED_HOSTS = [
-    "192.168.43.30",
     "localhost",
     "127.0.0.1",
+    "*",
 ]
 
 CSRF_TRUSTED_ORIGINS = [

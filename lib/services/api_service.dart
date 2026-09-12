@@ -2,14 +2,14 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
+import 'api_config.dart';
 
 class ApiService {
-  static const String apiUrl =
-      "http://192.168.43.30:8000/api/upload/";
+  static const String apiUrl = ApiConfig.uploadUrl;
 
   static Future<Map<String, dynamic>> uploadImage(File imageFile) async {
     try {
-      var request = http.MultipartRequest(
+      final request = http.MultipartRequest(
         'POST',
         Uri.parse(apiUrl),
       );
@@ -21,15 +21,17 @@ class ApiService {
         ),
       );
 
-      var response = await request.send();
+      final response = await request.send();
 
-      var responseData =
+      final responseData =
           await response.stream.bytesToString();
 
+      print("API URL: $apiUrl");
       print("STATUS CODE: ${response.statusCode}");
       print("SERVER RESPONSE: $responseData");
 
-      if (response.statusCode == 201 || response.statusCode == 200) {
+      if (response.statusCode == 201 ||
+          response.statusCode == 200) {
         return jsonDecode(responseData);
       } else {
         throw Exception(
